@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section class="section-how background-color-white">
+  <div class="page-padding">
+    <div class="container-medium faq-section">
+      <div class="padding-vertical padding-xhuge">
+        <div class="w-layout-grid how_component">
+          <div class="left-content">
+            <div class="margin-bottom margin-small">
+              <div class="padding-vertical padding-huge">
+                <h4>Connect with us and Earn points</h3> <br>
+                  <h4>Your Watchlist:</h1>
+                  <ul>
+                    {% for movie in movies %}
+                    <li>{{ movie.title }} - {{ movie.description }}</li>
+                    {% endfor %}
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="comm-value_component">
+            <h3 align="center">Notes</h3>
+            <ul class="list-group list-group-flush" id="notes">
+              {% for note in user.notes %}
+              <li class="list-group-item">
+                {{ note.data }}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </li>
+              {% endfor %}
+            </ul>
+            <form method="POST">
+              <textarea name="note" id="note" class="form-control"></textarea>
+              <br />
+              <div class="margin-top margin-xlarge button-row is-button-row-center">
+                <button type="submit" class="button-secondary with-icon w-inline-block">Add Note</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- steam profile page moderated -->
+
+<script>
+  function deleteNote(noteId) {
+    fetch("/delete-note", {
+      method: "POST",
+      body: JSON.stringify({ noteId: noteId }),
+    }).then((_res) => {
+      window.location.href = "/connect";
+    });
+  }
+</script>
+{% endblock %}

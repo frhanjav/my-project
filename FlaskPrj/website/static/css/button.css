@@ -1,0 +1,271 @@
+:root {
+    --text: #000000;
+    --background: #fce9d4;
+    --backgroundlight: #FFEBED;
+    --primary: #124e92;
+    --secondary: #fbdbb7;
+    --accent: #3683dc;
+    --redd: #ed4a60;
+}
+
+.button {
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border: 2px solid --secondary;
+    border-radius: 100px;
+    background-color: var(--primary);
+    -webkit-transition: border-color 200ms ease, background-color 200ms ease;
+    transition: border-color 200ms ease, background-color 200ms ease;
+    font-family: sans-serif;
+    color: var(--background);
+    font-size: 1.125rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.is-button-small {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.w-button {
+    display: inline-block;
+    padding: 9px 15px;
+    background-color: #3898EC;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.button.is-button-small.w-button {
+    text-decoration: none;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    border: 2px solid --secondary;
+    border-radius: 100px;
+    background-color: var(--primary);
+    -webkit-transition: border-color 200ms ease, background-color 200ms ease;
+    transition: border-color 200ms ease, background-color 200ms ease;
+    font-family: sans-serif;
+    color: white;
+    line-height: 1.1;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.button.is-menu {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.menu-button-container {
+    display: none;
+}
+
+
+
+.button-primary {
+    text-decoration: none;
+    color: var(--backgroundlight);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    padding: 1rem;
+    font-size: 12px;
+    line-height: 20px;
+    transition: all .2s;
+    border-radius: 40px;
+}
+
+.button-primary:hover {
+    color: #fff;
+    background-color: #32343a;
+}
+
+.button-primary:active {
+    background-color: #43464d;
+}
+
+
+.button.is-button-small {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.button.is-button-small.is-cyan {
+    border-color: #a3e9e4;
+    background-color: #a3e9e4;
+    color: #2e0b26;
+}
+
+.button.is-button-small.is-cyan:hover {
+    border-color: #66d2cc;
+    background-color: #66d2cc;
+}
+
+.button.is-button-small.is-red {
+    border-color: #ed4a60;
+    background-color: #ed4a60;
+    color: #fff;
+}
+
+.button.is-button-small.is-red:hover {
+    border-color: #d42e45;
+    background-color: #d42e45;
+}
+
+.button.with-icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-column-gap: 0.5rem;
+    line-height: 1;
+}
+
+.button.with-icon.is-red {
+    text-decoration: none;
+}
+
+.button.with-icon.footer-button-mobile {
+    display: none;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.button.is-red {
+    border-color: #ed4a60;
+    background-color: #ed4a60;
+}
+
+.button.is-red:hover {
+    border-color: #d42e45;
+    background-color: #d42e45;
+}
+
+.button.is-yellow {
+    border-color: #efcc74;
+    background-color: #efcc74;
+    color: #2e0b26;
+}
+
+.button.is-yellow:hover {
+    border-color: #e7a364;
+    background-color: #e7a364;
+}
+
+.button.is-blue {
+    border-color: #2551b3;
+    background-color: #2551b3;
+}
+
+.button.is-blue:hover {
+    border-color: #0d3898;
+    background-color: #0d3898;
+}
+
+.button.is-button-submit {
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    padding: 0rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    opacity: 0.74;
+    font-size: 0.9rem;
+}
+
+.button.is-button-submit:hover {
+    border-color: #fff;
+}
+
+.button.is-menu {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.button.is-menu.is-cyan {
+    border-color: #a3e9e4;
+    background-color: #a3e9e4;
+    color: #2e0b26;
+}
+
+.button.is-menu.is-cyan:hover {
+    border-color: #66d2cc;
+    background-color: #66d2cc;
+}
+
+
+.button-secondary {
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border: 2px solid #ed4a60;
+    border-radius: 100px;
+    background-color: transparent;
+    -webkit-transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+    transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+    font-family: 'Gt america standard', sans-serif;
+    color: #ed4a60;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.button-secondary:hover {
+    background-color: #ed4a60;
+    color: #fff;
+}
+
+.button-secondary.is-button-small {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.button-secondary.with-icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-column-gap: 0.5rem;
+}

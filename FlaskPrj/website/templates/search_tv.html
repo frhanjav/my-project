@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<section class="section-drivers background-color-white">
+    <div class="page-padding">
+        <div class="container-home-drivers">
+            <div class="padding-vertical padding-xhuge">
+
+                <div class="margin-bottom margin-small">
+                    <div class="text-align-center">
+                        <div class="max-width-small align-center">
+                            <div class="margin-bottom margin-small">
+                                <h2 class="h3-medium">Search for TV Details</h2>
+                            </div>
+                        </div>
+                        <form action="/series-details" method="get">
+                            <label for="series_id">Enter TV ID:</label>
+                            <input type="text" id="series_id" name="id" required>
+                            <input type="submit" value="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

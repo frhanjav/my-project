@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section class="section-how background-color-white">
+  <div class="page-padding">
+    <div class="container-medium faq-section">
+      <div class="padding-vertical padding-xhuge">
+        <div class="w-layout-grid how_component">
+          <div class="left-content">
+            <div class="margin-bottom margin-small">
+              <div id="watchlistContainer">
+                <h4>Movies:</h4>
+                  <br />
+                  <ul>
+                    {% for movie in watched_movies %}
+                      <li>{{ movie.title }}</li>
+                    {% endfor %}
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="comm-value_component">
+            <h4>TV Shows:</h4>
+
+            <div class="margin-top margin-xlarge">
+              
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

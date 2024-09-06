@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @media (min-width:992px) {}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>24fps</title>
+    <link rel="icon" type="image/png" href="/popcorn2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/try.css') }}"> -->
+
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/button.css">
+
+
+    <link rel="stylesheet" href="/static/css/font.css">
+    <link rel="stylesheet" href="/static/css/margin.css">
+    <link rel="stylesheet" href="/static/css/padding.css">
+    <link rel="stylesheet" href="/static/css/form.css">
+    <link rel="stylesheet" href="/static/css/image.css">
+    <link rel="stylesheet" href="/static/css/menu.css">
+    <link rel="stylesheet" href="/static/css/id.css">
+
+    <link rel="stylesheet" href="/static/css/try.css">
+
+    <link rel="stylesheet" href="/static/css/media991.css">
+    <link rel="stylesheet" href="/static/css/media767.css">
+    <link rel="stylesheet" href="/static/css/media479.css">
+
+</head>
+
+<body>
+
+    <div style="opacity:1" class="nav-fixed">
+        <div data-animation="over-left" class="navbar_component w-nav" data-easing2="ease"
+            fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium"
+            data-w-id="5304d41c-21dd-1f06-7d38-7cf21b1f1ae0" role="banner" data-duration="300" data-doc-height="1">
+            <div class="navbar_container">
+                <nav class="navbar_menu w-nav-menu" role="navigation">
+                    <div class="menu-scroll">
+                        <a href="#" class="menu-close-icon w-nav-brand">
+                            <img alt="close icon" loading="lazy"
+                                src="https://assets.website-files.com/62ad1f386286e53cb8d75b62/62ae34b6450de173da0c39d6_Close-large-w.svg" />
+                        </a>
+                        <a href="/" aria-current="page" class="navbar_link mobile-menu-link w-nav-link w--current">Home</a>
+                        <a href="/about" class="navbar_link w-nav-link">About</a>
+                        <a href="/connect" class="navbar_link w-nav-link">Connect</a>
+                        
+                        <a href="https://developer.themoviedb.org/docs" class="nav-menu-link margin-top margin-large w-nav-link">API</a>
+                        <a href="/about" class="nav-menu-link w-nav-link">About Us</a>
+                        <a href="/faq" class="nav-menu-link w-nav-link">FAQ</a>
+
+                        <div class="button-row is-button-row-center margin-top margin-large mobile-menu-button">
+                            <a href="/login" class="button with-icon is-red is-menu-button w-inline-block">
+                                <div>Login</div>
+                                <div class="chevron-icon w-embed">
+                                    <svg width=".875rem" height=".875rem" viewBox="0 0 320 512" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="/" aria-current="page" class="navbar_logo-link-menu w-nav-brand w--current">
+                            <img alt="" loading="eager" src="/popcorn.svg" />
+                        </a>
+                    </div>
+                </nav>
+                <a href="/" aria-current="page" class="navbar_logo-link w-nav-brand w--current">
+                    <img alt="" loading="lazy" src="/popcorn.svg" class="navbar_logo">
+                </a>
+                <div id="w-node-1234" class="menu-button-container">
+                    <div class="button-is-menu">
+                        <div id="w-node-12334" class="menu-button w-nav-button">
+                            <div>Menu</div>
+                        </div>
+                        <img alt="menu icon" loading="lazy" src="/popcorn.svg" class="menu-icon">
+                    </div>
+                </div>
+                <div class="navbar_menu_buttons hide-tablet" id="w-node-323232">
+                    {% if user.is_authenticated %}
+                    <a href="/watchlist" class="navbar_link w-nav-link">Watchlist</a>
+                    <a href="/dashboard" class="navbar_link hide-tablet w-nav-link">{{current_user.username}}</a>
+                    <a href="/logout" class="button is-button-small w-button">Logout</a>
+                    {% else %}
+                    <a href="https://developer.themoviedb.org/docs" class="navbar_link hide-tablet w-nav-link">API</a>
+                    <a href="/login" class="button is-button-small w-button">Login</a>
+                    {% endif %}
+                </div>
+                <div class="navbar_menu-background"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main class="main-wrapper">
+            <div class="padding-vertical padding-nav">
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                {% if category == 'error' %}
+                <div role="alert">
+                    {{ message }}
+                    <button type="button" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% else %}
+                <div role="alert">
+                    {{ message }}
+                    <button type="button" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                {% block body %}
+
+                {% endblock %}
+
+            </div>
+
+            <div class="footer_component">
+                <div class="page-padding z-index-1">
+                    <div class="container-large">
+                        <div class="padding-vertical padding-footer">
+                            <div class="padding-bottom padding-footer">
+                                <div class="w-layout-grid footer_top-wrapper">
+                                    <div id="w-node-_51801f33-35c9-0736-bf74-59875c4f5314-5c4f530e"
+                                        class="w-layout-grid footer_left-wrapper">
+                                        <div id="w-node-_51801f33-35c9-0736-bf74-59875c4f5315-5c4f530e"
+                                            class="footer-logo-container">
+                                            <a href="/" id="w-node-_51801f33-35c9-0736-bf74-59875c4f5316-5c4f530e"
+                                                aria-current="page" class="footer_logo-link w-nav-brand w--current">
+                                                <img src="/static/images/popcorn2.png" loading="lazy" alt=""
+                                                    class="footer-logo-image" />
+                                            </a>
+                                            <a href="/connect"
+                                                class="button with-icon footer-button-mobile w-inline-block">
+                                                <div>Contribute</div>
+                                                <div class="chevron-icon w-embed">
+                                                    <svg width=".875rem" height=".875rem" viewBox="0 0 320 512"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="w-node-_51801f33-35c9-0736-bf74-59875c4f531c-5c4f530e"
+                                            class="footer_link-list">
+                                            <div class="margin-bottom margin-footer-column-headers">
+                                                <div class="text-style-label1">Explore</div>
+                                            </div>
+                                            <a href="/" aria-current="page" class="footer_link w--current">Home</a>
+                                            <a href="/retailers" class="footer_link">For Retailers</a>
+                                            <a href="/drivers" class="footer_link">For Drivers</a>
+                                            <a href="/careers" class="footer_link">Careers</a>
+                                            <a href="/about" class="footer_link">About us</a>
+                                            <a href="/faq" class="footer_link">FAQ</a>
+                                        </div>
+                                        <div class="footer_link-list">
+                                            <div class="margin-bottom margin-footer-column-headers">
+                                                <div class="text-style-label1">Social</div>
+                                            </div>
+                                            <a href="#" target="_blank" class="footer_link">LinkedIn</a>
+                                            <a href="#" target="_blank" class="footer_link">Medium</a>
+                                            <a href="#" target="_blank" class="footer_link">Instagram</a>
+                                        </div>
+                                        <div class="footer_link-list">
+                                            <div class="margin-bottom margin-footer-column-headers">
+                                                <div class="text-style-label1">More links</div>
+                                            </div>
+                                            <a href="#" class="footer_link">Terms of Service</a>
+                                            <a href="#" class="footer_link">Legal</a>
+                                            <a href="#" class="footer_link">Privacy Policy</a>
+                                        </div>
+                                    </div>
+                                    <div class="footer2_right-wrapper">
+                                        <div class="margin-bottom margin-large hide-tablet">
+                                            <a href="/connect" class="button with-icon w-inline-block">
+                                                <div class="chevron-icon left-side w-embed">
+                                                    <svg width=".875rem" height=".875rem" viewBox="0 0 320 512"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </div>
+                                                <div>Contribute</div>
+                                                <div class="chevron-icon right-side w-embed">
+                                                    <svg width=".875rem" height=".875rem" viewBox="0 0 320 512"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="margin-bottom margin-footer-column-headers">
+                                            <div class="text-style-label1">Newsletter</div>
+                                        </div>
+                                        <div class="footer_form-block w-form">
+                                            <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form"
+                                                data-name="Newsletter Form" method="get" class="footer_form-newsletter"
+                                                data-wf-page-id="62ad1f386286e56a0ed75b67"
+                                                data-wf-element-id="51801f33-35c9-0736-bf74-59875c4f534c">
+                                                <input type="email" class="form-input is-red w-input" maxlength="256"
+                                                    name="Newsletter-Email" data-name="Newsletter Email"
+                                                    placeholder="Email address" id="Newsletter-Email" required="" />
+                                                <div id="w-node-_6dd02386-aed2-a198-fab4-06cde81724dc-5c4f530e"
+                                                    class="submit-button-wrapper">
+                                                    <input type="submit" value="" data-wait=""
+                                                        id="w-node-_51801f33-35c9-0736-bf74-59875c4f534e-5c4f530e"
+                                                        class="button is-button-submit w-button" />
+                                                    <div class="chevron-icon submit-button-icon w-embed">
+                                                        <svg width=".875rem" height=".875rem" viewBox="0 0 320 512"
+                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                                                fill="currentColor" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="success-message w-form-done">
+                                                <div>Thank you! Your submission has been received!</div>
+                                            </div>
+                                            <div class="error-message w-form-fail">
+                                                <div>Oops! Something went wrong while submitting the form.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_bottom-wrapper">
+                                <div class="w-layout-grid footer_legal-list">
+                                    <div id="w-node-_51801f33-35c9-0736-bf74-59875c4f5358-5c4f530e"
+                                        class="footer_credit-text">©
+                                        24FPS, Inc. 2022</div>
+                                    <div id="w-node-_51801f33-35c9-0736-bf74-59875c4f535a-5c4f530e"
+                                        class="footer_credit-text">
+                                        All right reserved.</div>
+                                    <div id="w-node-_51801f33-35c9-0736-bf74-59875c4f535c-5c4f530e"
+                                        class="footer_credit-text">
+                                        Being nice is free</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/movie.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tv.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/new.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/new2.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+      function performPost() {
+        $.ajax
+      }
+    </script>
+</body>
+
+</html>

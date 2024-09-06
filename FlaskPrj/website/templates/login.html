@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section class="section-how background-color-white">
+  <div class="page-padding">
+    <div class="container-medium faq-section">
+      <div class="padding-vertical padding-xhuge">
+        <div class="w-layout-grid how_component">
+          <div class="left-content">
+            <div class="margin-bottom margin-small">
+              <h4>Login</h4>
+                <br />
+                <form method="POST">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Enter password" />
+                </div>
+                <div class="margin-top margin-xlarge">
+                  <div class="button-row is-button-row-center">
+                    <button class="button-secondary with-icon w-inline-block" type="submit">Login</button>
+                  </div>
+                </div>
+                </form>
+            </div>
+          </div>
+          <div class="comm-value_component">
+            <h4>Dont have an account? Register Now : </h4>
+
+            <div class="margin-top margin-xlarge">
+              <div class="button-row is-button-row-center">
+                <a class="button-secondary with-icon w-inline-block" href="/register">Sign Up</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,274 @@
+.text-style-p3 {
+  font-family: 'Gt america standard', sans-serif;
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.inner-left-content {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.movie-search-overview {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375da5d0fd74069887a41_Garnett-Black.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375da95df1827122c6005_Garnett-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375da5b53dd9bf79dbc14_Garnett-BlackItalic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dad8e8f8665be38f41_Garnett-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db73e2008047feee64_Garnett-Bold.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375da8f196db71c6a198b_Garnett-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db8f2c89df000ce61f_Garnett-BoldItalic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375da7d41784acbeabfed_Garnett-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db573d7e30993ce796_Garnett-Light.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dba928663e77d9fc19_Garnett-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db5d0fd73c7e887a43_Garnett-Regular.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dbbb6d1f2624d04b1c_Garnett-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db74587869463a9a0c_Garnett-MediumItalic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db8f2c8973c70ce620_Garnett-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db92bd04c0da47da79_Garnett-RegularItalic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dbfe50d83d51ecf79e_Garnett-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dbdbd7740caefc7545_Garnett-Semibold.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dbc4d3e3ac4c960d01_Garnett-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375dbd3bbfe6939a3e449_Garnett-LightItalic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db573d7e9b143ce797_Garnett-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db7a8302dff77b31db_Garnett-SemiboldItalic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db7d417853dbeabfef_Garnett-SemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db72edac11ada6d949_Garnett-Medium.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b375db7ba19a133633dc9a_Garnett-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795ecf2115feede1e054_GT-America-Standard-Black-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795ecf21151903e1e053_GT-America-Standard-Black-Italic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795ea9e760520ac96286_GT-America-Standard-Black.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795ebb6d1f0617d05ace_GT-America-Standard-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795e72edac315ba70748_GT-America-Standard-Bold-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795e712212315a7ab40c_GT-America-Standard-Bold-Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795e49cb2964dfd424fb_GT-America-Standard-Bold.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795e72edac2afba70749_GT-America-Standard-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795ed4d544303e16562e_GT-America-Standard-Light-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795e95df1884a82c8d1f_GT-America-Standard-Light-Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f3949885b84aacb90_GT-America-Standard-Light.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f83bf714aa6d20479_GT-America-Standard-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f7122120b857ab40d_GT-America-Standard-Medium.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f7a83022ed07b4577_GT-America-Standard-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f78100a2daaea1547_GT-America-Standard-Regular.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f16683883e0ed8755_GT-America-Standard-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f9fee181e8937baee_GT-America-Standard-Thin-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f7335d52b6578b0bf_GT-America-Standard-Thin-Italic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795fd3bbfe5d59a4029a_GT-America-Standard-Thin.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795fbb6d1f330bd05acf_GT-America-Standard-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard ultra';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f73e20041e0ff0e38_GT-America-Standard-Ultra-Light-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795ff46e585453c7f07f_GT-America-Standard-Ultra-Light-Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard ultra';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795fc4d3e380ab9624dd_GT-America-Standard-Ultra-Light.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f5b53dd42389df6a5_GT-America-Standard-Ultra-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f8f196d37f56a385f_GT-America-Standard-Regular-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795fd8e8f859c9e3ab4a_GT-America-Standard-Regular-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america standard';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3796092bd04cc4a48019f_GT-America-Standard-Medium-Italic.ttf') format('truetype'), url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b3795f0de941160de7bb71_GT-America-Standard-Medium-Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america compressed trial';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b380d03ed7e691c3d11856_GT-America-Compressed-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america compressed trial';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b380d00e051dffbbefeefc_GT-America-Compressed-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america mono trial';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b380d23ed7e61c96d1185f_GT-America-Mono-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america mono trial';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b380d230a52bb41e959430_GT-America-Mono-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt america compressed trial';
+  src: url('https://assets.website-files.com/62ad1f386286e53cb8d75b62/62b380d0c2981c9205a379c4_GT-America-Compressed-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

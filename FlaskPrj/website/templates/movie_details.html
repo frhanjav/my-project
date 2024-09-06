@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section class="section-how background-color-white">
+  <div class="page-padding">
+    <div class="container-medium faq-section">
+      <div class="padding-vertical padding-xhuge">
+        <div class="w-layout-grid how_component">
+          <div class="left-content">
+            <div class="margin-bottom margin-small">
+              <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{ movie_data.poster_path}}" alt="poster">
+            </div>
+          </div>
+          <div class="comm-value_component">
+            {% if movie_data.error %}
+            <p>Error: {{ movie_data.error }}</p>
+            {% else %}
+
+            <h3 id="title">{{ movie_data.title }}</h3><br>
+            <!-- <button onclick="watchlisted(); addToWatchlist('{{ movie_data.id }}');" class="js-watchlist-button">Add to Watchlist</button> -->
+            <button class="js-watchlist-button ajax-click-action" data-action="" id="watchlist">Add to Watchlist</button>
+            <form action="{{ url_for('add_to_watchlist', movie_id={{ movie.id }}) }}" method="POST">
+              <button type="submit">Add to Watchlist</button>
+            </form>
+            <button onclick="watched();" class="js-watched-button">Watched?</button>
+            <br><br>
+            <p class="text-style-p3"><span class="bold">Overview:</span> {{ movie_data.overview }}</p>
+            <p class="text-style-p3"><span class="bold">Release Date:</span> {{ movie_data.release_date }}</p>
+            <p class="text-style-p3"><span class="bold">Adult:</span> {{movie_data.adult}}</p>
+            <p class="text-style-p3"><span class="bold">Runtime:</span> {{movie_data.runtime}} minutes</p>
+            <p class="text-style-p3"><span class="bold">ID:</span> {{ movie_data.id}}</p>
+
+            <form action="{{ url_for('views.add_to_watchlist', movie_id=movie.id) }}" method="post">
+              <button type="submit">Add to Watchlist</button>
+          </form>
+
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <script>
+   let movieId = {{ movie_id }};
+
+function toggleWatchlist() {
+    fetch('/add_to_watchlist', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ movie_id: movieId }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Movie successfully added to or removed from the watchlist
+            // Update the button text or style based on success
+            updateWatchlistUI();
+        } else {
+            // Failed to update watchlist
+            console.error('Failed to update watchlist: ' + data.message);
+        }
+    })
+    .catch(error => {
+        // Handle network or other errors
+        console.error('Network error:', error);
+    });
+}
+
+function updateWatchlistUI() {
+  // Fetch the current watchlist and update the UI accordingly
+  fetch('/get_watchlist')  // Adjust the endpoint to fetch the watchlist
+  .then(response => response.json())
+  .then(data => {
+      // Assuming data is an array of watchlist entries
+      console.log('Watchlist data:', data);
+
+      // Get the container where you want to display the watchlist
+      const watchlistContainer = document.getElementById('watchlistContainer');
+
+      // Clear existing content in the container
+      watchlistContainer.innerHTML = '';
+
+      // Check if the watchlist is not empty
+      if (data.length > 0) {
+          // Create an unordered list to display watchlist entries
+          const watchlistList = document.createElement('ul');
+
+          // Iterate over each watchlist entry and create list items
+          data.forEach(entry => {
+              const listItem = document.createElement('li');
+              listItem.textContent = entry.movie.title;  // Adjust this based on your data structure
+              watchlistList.appendChild(listItem);
+          });
+
+          // Append the watchlist to the container
+          watchlistContainer.appendChild(watchlistList);
+      } else {
+          // Display a message when the watchlist is empty
+          watchlistContainer.textContent = 'Your watchlist is empty.';
+      }
+  })
+  .catch(error => {
+      // Handle network or other errors
+      console.error('Network error:', error);
+  });
+}
+
+function watchlisted() {
+  const buttonElement = document.querySelector('.js-watchlist-button');
+
+  if (buttonElement.innerText === 'Add to Watchlist') {
+    buttonElement.innerText = 'Added to Watchlist!';
+  } else {
+    buttonElement.innerText = 'Add to Watchlist';
+  }
+}
+
+let watchlistButton = document.querySelector('.js-watchlist-button');
+
+// Add an event listener to the button
+watchlistButton.addEventListener('click', function() {
+    watchlisted();
+    toggleWatchlist();
+});
+</script> -->
+
+{% endblock %}

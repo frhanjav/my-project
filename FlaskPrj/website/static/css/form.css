@@ -1,0 +1,110 @@
+.form-input {
+    height: auto;
+    max-height: 62px;
+    margin-bottom: 0px;
+    padding: 1.25rem;
+    border: 1px solid #a7a7a7;
+    border-radius: 8px;
+    font-family: 'Gt america standard', sans-serif;
+    color: #45193b;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.form-input:focus {
+    border-color: #a7a7a7;
+}
+
+.form-input::-webkit-input-placeholder {
+    color: #a7a7a7;
+}
+
+.form-input:-ms-input-placeholder {
+    color: #a7a7a7;
+}
+
+.form-input::-ms-input-placeholder {
+    color: #a7a7a7;
+}
+
+.form-input::placeholder {
+    color: #a7a7a7;
+}
+
+.form-input.is-select-input {
+    background-color: #fff;
+    background-image: none;
+}
+
+.form-input.is-text-area {
+    overflow: auto;
+    height: auto;
+    min-height: 11.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.form-input.is-red {
+    border-color: #d42e45;
+    background-color: #d42e45;
+    color: #fff;
+}
+
+.form-input.is-red::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.form-input.is-red:-ms-input-placeholder {
+    color: #fff;
+}
+
+.form-input.is-red::-ms-input-placeholder {
+    color: #fff;
+}
+
+.form-input.is-red::placeholder {
+    color: #fff;
+}
+
+.background-color-lightgrey {
+    background-color: #f4f4f4;
+}
+
+.form-checkbox-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    min-height: 1.125rem;
+    min-width: 1.125rem;
+    margin-top: 0px;
+    margin-right: 0.5rem;
+    margin-left: -1.25rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 0px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+.form-checkbox-icon.w--redirected-checked {
+    border-width: 1px;
+    border-color: #000;
+    background-color: #000;
+    background-size: 16px 16px;
+    box-shadow: none;
+}
+
+.form-checkbox-icon.w--redirected-focus {
+    border-color: #000;
+    box-shadow: none;
+}
+
+.form-field-wrapper {
+    position: relative;
+}
+
+.form-field-wrapper.is-red {
+    background-color: #ed4a60;
+}

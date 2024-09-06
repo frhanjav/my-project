@@ -1,0 +1,14 @@
+.menu-button-container {
+    display: none;
+}
+
+.nav-menu-link.w--current {
+    color: #45193b;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.menu-close-icon {
+    display: none;
+    padding-left: 0rem;
+}

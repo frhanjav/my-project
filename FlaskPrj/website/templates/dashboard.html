@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section class="section-how background-color-white">
+  <div class="page-padding">
+    <div class="container-medium faq-section">
+      <div class="padding-vertical padding-xhuge">
+        <div class="w-layout-grid how_component">
+          <div class="left-content">
+            <div class="margin-bottom margin-small">
+              <h4>Info:</h4>{{current_user.email}}
+                <ul>
+                  <li><strong>Username:</strong> {{current_user.username}}</li>
+                  <li><strong>Email:</strong>  {{current_user.email}}</li>
+                  <li><strong>UID:</strong>  {{current_user.id}}</li>
+                </ul>
+              
+            </div>
+          </div>
+          <div class="comm-value_component">
+            <h4>Your Dshbrd</h4>
+            <h6>Watched Film Counter: {{current_user.id}}</h6>
+            <h6>Watchlisted: {{current_user.id}}</h6> 
+            <div class="margin-top margin-xlarge">
+              <div class="button-row is-button-row-center">
+                <a class="button-secondary with-icon w-inline-block" href="/watchlist">Watchlist</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Example</title>
+</head>
+
+<body>
+  <div class="container">
+    <button onclick="watchlisted();" class="js-watchlist-button">Add to Watchlist</button>
+    <button onclick="watched();" class="js-watched-button">Watched?</button>
+  </div>
+  <script>
+    function watchlisted() {
+      const buttonElement = document.querySelector('.js-watchlist-button');
+
+      if (buttonElement.innerText === 'Add to Watchlist?') {
+        buttonElement.innerText = 'Added to Watchlist!';
+      } else {
+        buttonElement.innerText = 'Add to Watchlist';
+      }
+    }
+
+    function watched() {
+      const buttonElement = document.querySelector('.js-watched-button');
+
+      if (buttonElement.innerText === 'Watched?') {
+        buttonElement.innerText = 'Watched!';
+      } else {
+        buttonElement.innerText = 'Watched?';
+      }
+    }
+  </script>
+</body>
+
+</html>
